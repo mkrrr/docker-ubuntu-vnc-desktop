@@ -6,6 +6,8 @@ FROM dorowu/ubuntu-desktop-lxde-vnc:latest as system
 ################################################################################
 # Dev
 ################################################################################
+RUN apt-get update && apt-get -y upgrade 
+
 
 RUN apt-get -y --no-install-recommends install \
   aptitude \
@@ -29,5 +31,5 @@ RUN apt-get -y --no-install-recommends install \
   tree \
   unzip \
   vim \
-  wxwidgets3.0
-  
+  wx3.0 \
+  libwxgtk3.0-dev
